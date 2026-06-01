@@ -1,0 +1,56 @@
+.contact-help-wrapper {
+  max-width: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.section:has(.contact-help-wrapper) {
+  margin: 0 !important;
+}
+
+.contact-help {
+  --contact-help-bg: rgb(251, 233, 216);
+  --contact-help-heading-color: rgb(227, 113, 10);
+  --contact-help-text-color: rgb(28, 32, 38);
+  --contact-help-btn-bg: rgb(227, 113, 10);
+  --contact-help-btn-color: #fff;
+
+  background: var(--contact-help-bg);
+  padding: 48px 24px;
+  text-align: center;
+}
+
+.contact-help h2 {
+  color: var(--contact-help-heading-color);
+  font-size: 32px;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 0.25em;
+}
+
+.contact-help p {
+  color: var(--contact-help-text-color);
+  font-size: 18px;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+main .contact-help a.button:any-link {
+  display: inline-block;
+  background: var(--contact-help-btn-bg);
+  color: var(--contact-help-btn-color);
+  border: 2px solid var(--contact-help-btn-bg);
+  border-radius: 2px;
+  padding: 13px 28px;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  margin-top: 0.5em;
+  text-align: center;
+  white-space: nowrap;
+}
+
+main .contact-help a.button:any-link:hover {
+  background: rgb(195, 95, 5);
+  border-color: rgb(195, 95, 5);
+}

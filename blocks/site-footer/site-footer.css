@@ -1,0 +1,183 @@
+/* Site Footer Block */
+.site-footer {
+  --footer-bg: rgb(28, 32, 38);
+  --footer-text: #fff;
+  --footer-border: rgb(85, 88, 92);
+  --footer-padding-x: 88px;
+  --footer-padding-top: 90px;
+  --footer-padding-bottom: 50px;
+
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+  padding: var(--footer-padding-top) var(--footer-padding-x) var(--footer-padding-bottom);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* Row 1: Tagline */
+.site-footer > div:nth-child(1) {
+  border-bottom: 1px solid var(--footer-border);
+  padding-bottom: 30px;
+  margin-bottom: 40px;
+}
+
+.site-footer > div:nth-child(1) p:first-child {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.site-footer > div:nth-child(1) p:last-child {
+  font-size: 12.5px;
+  margin: 4px 0 0;
+}
+
+/* Row 2: Navigation + Social + Connect */
+.site-footer > div:nth-child(2) {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 40px;
+  padding-top: 10px;
+}
+
+.site-footer > div:nth-child(2) > div:first-child {
+  flex: 2;
+}
+
+.site-footer > div:nth-child(2) > div:nth-child(2) {
+  flex: 1;
+}
+
+.site-footer > div:nth-child(2) > div:nth-child(3) {
+  flex: 1;
+}
+
+.site-footer > div:nth-child(2) ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+}
+
+.site-footer > div:nth-child(2) > div:nth-child(2) h2 {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 0 12px;
+  color: var(--footer-text);
+}
+
+.site-footer > div:nth-child(2) > div:nth-child(2) ul {
+  display: flex;
+  gap: 16px;
+}
+
+.site-footer > div:nth-child(2) > div:nth-child(3) ul {
+  flex-direction: column;
+  gap: 12px;
+}
+
+.site-footer a:any-link {
+  color: var(--footer-text);
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Row 3: Acknowledgement */
+.site-footer > div:nth-child(3) {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  border-top: 1px solid var(--footer-border);
+  padding-top: 30px;
+  margin-bottom: 20px;
+}
+
+.site-footer > div:nth-child(3) picture img {
+  width: 50px;
+  height: auto;
+}
+
+.site-footer > div:nth-child(3) > div:last-child p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Row 4: Copyright */
+.site-footer > div:nth-child(4) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.site-footer > div:nth-child(4) p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.site-footer > div:nth-child(4) picture img {
+  height: 40px;
+  width: auto;
+}
+
+/* Full-width override */
+.site-footer-wrapper {
+  max-width: 100% !important;
+  padding: 0 !important;
+}
+
+/* Override section container inside footer fragment */
+footer .section .site-footer-wrapper {
+  max-width: 100% !important;
+  padding: 0 !important;
+}
+
+footer .site-footer-container {
+  max-width: 100% !important;
+  padding: 0 !important;
+}
+
+footer .section {
+  margin: 0 !important;
+}
+
+/* Override existing footer.css light background */
+footer:has(.site-footer) {
+  background-color: var(--footer-bg, rgb(28, 32, 38));
+}
+
+footer:has(.site-footer) .footer > div {
+  max-width: 100%;
+  padding: 0;
+}
+
+/* Button reset for footer links */
+footer .site-footer .button-container { display: inline; }
+footer .site-footer a.button:any-link {
+  background: none;
+  border: none;
+  color: var(--footer-text);
+  font-size: inherit;
+  font-weight: inherit;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  text-decoration: none;
+}
+
+@media (max-width: 899px) {
+  .site-footer {
+    padding: 50px 24px 30px;
+  }
+
+  .site-footer > div:nth-child(2) {
+    flex-direction: column;
+    gap: 30px;
+  }
+}

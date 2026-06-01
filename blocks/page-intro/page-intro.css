@@ -1,0 +1,40 @@
+.page-intro-wrapper {
+  max-width: 100% !important;
+  padding: 0 !important;
+}
+
+.page-intro {
+  --block-bg: rgb(252, 241, 231);
+  --block-text: rgb(227, 113, 10);
+
+  background: var(--block-bg);
+  color: var(--block-text);
+  padding: 90px 48px;
+  display: flex;
+  align-items: center;
+}
+
+.page-intro > div {
+  max-width: 1232px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.page-intro h2 {
+  font-family: var(--heading-font-family, sans-serif);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--block-text);
+  margin: 0;
+}
+
+@media (width < 900px) {
+  .page-intro {
+    padding: 48px 24px;
+  }
+
+  .page-intro h2 {
+    font-size: 24px;
+  }
+}

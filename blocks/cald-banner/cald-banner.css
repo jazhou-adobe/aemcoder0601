@@ -1,0 +1,102 @@
+/* cald-banner block - Culturally and Linguistically Diverse language assistance banner */
+.cald-banner-wrapper {
+  max-width: 100% !important;
+  padding: 0 !important;
+  background-color: rgb(251, 233, 216);
+}
+
+.cald-banner {
+  --block-bg: #fff;
+  --block-text: rgb(28, 32, 38);
+  --block-padding: 32px;
+  --block-radius: 32px;
+
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 64px 24px;
+}
+
+.cald-banner > div {
+  background: var(--block-bg);
+  color: var(--block-text);
+  padding: var(--block-padding);
+  border-radius: var(--block-radius);
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+/* Image cell */
+.cald-banner > div > div:first-child {
+  flex-shrink: 0;
+  width: 64px;
+}
+
+.cald-banner > div > div:first-child img {
+  width: 64px;
+  height: auto;
+}
+
+/* Content cell */
+.cald-banner > div > div:last-child {
+  flex: 1;
+}
+
+.cald-banner h3 {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  font-size: var(--heading-font-size-l);
+  font-weight: 700;
+}
+
+.cald-banner p {
+  margin-top: 0;
+  margin-bottom: 0.75em;
+  font-size: var(--body-font-size-s);
+  line-height: 1.5;
+}
+
+.cald-banner ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+}
+
+.cald-banner ul li {
+  display: inline;
+}
+
+.cald-banner ul li::after {
+  content: " • ";
+  margin: 0 8px;
+  color: var(--block-text);
+}
+
+.cald-banner ul li:last-child::after {
+  content: none;
+}
+
+.cald-banner ul li a {
+  color: var(--link-color);
+  text-decoration: underline;
+  font-size: var(--body-font-size-s);
+}
+
+.cald-banner ul li a:hover {
+  color: var(--link-hover-color);
+}
+
+@media (width < 900px) {
+  .cald-banner > div {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .cald-banner ul {
+    justify-content: center;
+  }
+}
