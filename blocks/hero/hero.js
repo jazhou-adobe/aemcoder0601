@@ -1,3 +1,3 @@
-export default async function decorate(block) {
-  // Hero block is simple text — no restructuring needed
+export default function decorate(block) {
+  // Structure is already correct from .plain.html (row with 2 cells)
 }

@@ -4,31 +4,66 @@
 }
 
 .hero {
-  --hero-bg: rgb(252, 241, 231);
-  --hero-text: rgb(227, 113, 10);
-  --hero-padding: 64px;
-  --hero-font-size: 32px;
+  background-color: #e07000;
+  color: #fff;
+  padding: 0;
+  overflow: hidden;
+}
 
-  background-color: var(--hero-bg);
-  color: var(--hero-text);
-  padding: 64px 24px;
-  text-align: center;
-  display: flex;
+.hero > div {
+  max-width: 1232px;
+  margin: 0 auto;
+  padding: 48px 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
+  gap: 40px;
+}
+
+.hero > div > div:first-child {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
+  gap: 16px;
 }
 
-.hero h2 {
-  font-size: var(--hero-font-size);
+.hero h1 {
+  font-size: 48px;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.1;
   margin: 0;
-  max-width: 720px;
-  margin-inline: auto;
+  color: #fff;
 }
 
-@media (width >= 900px) {
-  .hero {
-    padding: 64px 32px;
+.hero p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 0;
+  color: #fff;
+}
+
+.hero picture {
+  display: block;
+}
+
+.hero picture img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+@media (width < 900px) {
+  .hero > div {
+    grid-template-columns: 1fr;
+    padding: 32px 16px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero > div > div:last-child {
+    order: -1;
   }
 }
